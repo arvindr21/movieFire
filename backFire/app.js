@@ -32,7 +32,9 @@ $(document).ready(function() {
         edit: function() {
             var movieName = prompt("Update the movie name", this.model.get('name').trim()); // to keep things simple and old skool :D
             if (movieName && movieName.length > 0) {
-                this.model.set({name: movieName});
+                this.model.set({
+                    name: movieName
+                });
             }
         },
         clear: function() {
@@ -63,6 +65,7 @@ $(document).ready(function() {
             this.input.val('');
         },
         addOne: function(movie) {
+            if ($('#loading').length > 0) $('#loading').remove();
             var view = new favMovieView({
                 model: movie
             });
