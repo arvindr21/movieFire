@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Movie Fire</title>
+    <link rel="stylesheet" type="text/css" href="app.css">
+</head>
+
+<body>
+    <h1>Movie Fire</h1>
+    <h3>Save all your Favorite Movies here</h3>
+    <hr />
+    <input type="text" id="movieName" placeholder="Enter your Favorite Movie Name" />
+    <h4>My Favorite Movies</h4>
+    <ol id="favMovies">
+    </ol>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/json2/20121008/json2.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.3/underscore-min.js"></script>
+    <script src="http://cdn.firebase.com/v0/firebase.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.10/backbone-min.js"></script>
+    <script src="http://firebase.github.io/backfire/examples/todos/backbone-firebase.js"></script>
+    <script src="app.js" type="text/javascript"></script>
+    <script type="text/template" id="movieTemplate">
+    <%- name %> [
+            <a href="javascript:" class="edit">Edit</a>|
+            <a href="javascript:" class="delete">Delete</a>]
+    </script>
+</body>
+
+</html>

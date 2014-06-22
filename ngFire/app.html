@@ -16,7 +16,7 @@
         <lable ng-hide="movies.length">Loading.. Please wait..</lable>
         <li ng-repeat="movie in movies">{{movie.name}} [
             <a href="javascript:" ng-click="edit($index)">Edit</a> |
-            <a href="#" ng-click="del($index)">Delete</a>]
+            <a href="javascript:" ng-click="del($index)">Delete</a>]
         </li>
     </ol>
     <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
