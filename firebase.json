@@ -1,0 +1,9 @@
+{
+  "firebase": "moviefire",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    ".*",
+    "**/node_modules/**"
+  ]
+}

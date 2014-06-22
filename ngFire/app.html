@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="MovieFire">
+
+<head>
+    <title>Movie Fire</title>
+    <link rel="stylesheet" type="text/css" href="app.css">
+</head>
+
+<body ng-controller="MainController">
+    <h1>Movie Fire</h1>
+    <h3>Save all your Favorite Movies here</h3>
+    <hr />
+    <input type="text" id="movieName" placeholder="Enter your Favorite Movie Name" ng-keypress="saveToList($event)" ng-model="mvName" />
+    <h4>My Favorite Movies</h4>
+    <ol id="favMovies">
+        <lable ng-hide="movies.length">Loading.. Please wait..</lable>
+        <li ng-repeat="movie in movies">{{movie.name}} [
+            <a href="javascript:" ng-click="edit($index)">Edit</a> |
+            <a href="#" ng-click="del($index)">Delete</a>]
+        </li>
+    </ol>
+    <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
+
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
